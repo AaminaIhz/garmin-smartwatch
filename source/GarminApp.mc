@@ -899,7 +899,6 @@ if (val != null) {
     var _idealMaxCadence = 150;
 //     _idealMinCadence = 120;
 //     _idealMaxCadence = 150;
-
 //     _chartDuration = ThirtyminChart as Number;
 
 //     _userHeight = 170;

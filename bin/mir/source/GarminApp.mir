@@ -3789,560 +3789,560 @@ c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_8
     var _idealMinCadence = 120;
     [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 899; @position = 8; @symbol_vardef = [_idealMaxCadence,899,8,24]; ]
     var _idealMaxCadence = 150;
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 941; @symbol_functiondef = [getInitialView,941,13,27]; @symbol_return<0> = [Views,941,34,39]; @symbol_return<1> = [Views,941,45,50]; @symbol_return<2> = [InputDelegates,941,52,66]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 940; @symbol_functiondef = [getInitialView,940,13,27]; @symbol_return<0> = [Views,940,34,39]; @symbol_return<1> = [Views,940,45,50]; @symbol_return<2> = [InputDelegates,940,52,66]; ]
     function getInitialView() as [Views] or [Views, InputDelegates] {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_941_68_943_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 942 8 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_940_68_942_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 941 8 ]
         %tmp.1 = newa 2;
-        symbol [ SimpleView %tmp.5 942 21 31 ];
+        symbol [ SimpleView %tmp.5 941 21 31 ];
         %tmp.5 = getv ? :SimpleView;
         %tmp.2 = newc %tmp.5 ();
         %tmp.6 = dup %tmp.1;
         %tmp.7 = aputv %tmp.6 0 %tmp.2;
-        symbol [ SimpleViewDelegate %tmp.11 942 39 57 ];
+        symbol [ SimpleViewDelegate %tmp.11 941 39 57 ];
         %tmp.11 = getv ? :SimpleViewDelegate;
         %tmp.8 = newc %tmp.11 ();
         %tmp.12 = dup %tmp.7;
         %tmp.13 = aputv %tmp.12 1 %tmp.8;
         ret %tmp.13;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_941_68_943_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_940_68_942_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 949; @symbol_functiondef = [getAverageCadence,949,13,30]; @symbol_return<0> = [Float,949,36,41]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 948; @symbol_functiondef = [getAverageCadence,948,13,30]; @symbol_return<0> = [Float,948,36,41]; ]
     function getAverageCadence() as Float {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_42_970_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 950 8 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_950_8_952_8_if_stmt:
-        symbol [ _cadenceCount %tmp.2 950 12 25 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_948_42_969_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 949 8 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_8_951_8_if_stmt:
+        symbol [ _cadenceCount %tmp.2 949 12 25 ];
         %tmp.2 = getv ? :_cadenceCount;
         %tmp.3 = 0;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_950_8_952_8_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_950_8_952_8_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_950_32_952_8_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 951 12 ]
+        bf %tmp.4 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_8_951_8_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_8_951_8_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_32_951_8_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 950 12 ]
         %tmp.5 = 0.0;
         ret %tmp.5;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_950_32_952_8_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_950_8_952_8_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_950_8_952_8_if_end:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 954 8 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_42_970_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_42_970_4_stop" ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_32_951_8_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_8_951_8_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_8_951_8_if_end:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 953 8 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_948_42_969_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_948_42_969_4_stop" ]
         %total.1 = local;
-        symbol [ total %total.1 954 12 17 ];
+        symbol [ total %total.1 953 12 17 ];
         %tmp.6 = 0.0;
         lputv %total.1 %tmp.6;
-        symbol [ total %total.1 954 12 17 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 955 8 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_42_970_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_42_970_4_stop" ]
+        symbol [ total %total.1 953 12 17 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 954 8 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_948_42_969_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_948_42_969_4_stop" ]
         %validSamples.2 = local;
-        symbol [ validSamples %validSamples.2 955 12 24 ];
+        symbol [ validSamples %validSamples.2 954 12 24 ];
         %tmp.7 = 0;
         lputv %validSamples.2 %tmp.7;
-        symbol [ validSamples %validSamples.2 955 12 24 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 957 8 ]
-        for @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_test @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_incr @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_init:
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_begin" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_end" ]
+        symbol [ validSamples %validSamples.2 954 12 24 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 956 8 ]
+        for @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_test @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_incr @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_init:
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_begin" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_end" ]
         %i.3 = local;
-        symbol [ i %i.3 957 17 18 ];
+        symbol [ i %i.3 956 17 18 ];
         %tmp.8 = 0;
         lputv %i.3 %tmp.8;
-        symbol [ i %i.3 957 17 18 ];
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_test:
+        symbol [ i %i.3 956 17 18 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_test:
         %tmp.9 = lgetv %i.3;
-        symbol [ i %tmp.9 957 24 25 ];
-        symbol [ MAX_BARS %tmp.11 957 28 36 ];
+        symbol [ i %tmp.9 956 24 25 ];
+        symbol [ MAX_BARS %tmp.11 956 28 36 ];
         %tmp.11 = getv ? :MAX_BARS;
         %tmp.12 = lt %tmp.9 %tmp.11;
-        bf %tmp.12 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_begin:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_43_963_8_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 958 12 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_43_963_8_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_43_963_8_stop" ]
+        bf %tmp.12 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_begin:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_43_962_8_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 957 12 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_43_962_8_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_43_962_8_stop" ]
         %c.4 = local;
-        symbol [ c %c.4 958 16 17 ];
-        symbol [ _cadenceHistory %tmp.14 958 20 35 ];
+        symbol [ c %c.4 957 16 17 ];
+        symbol [ _cadenceHistory %tmp.14 957 20 35 ];
         %tmp.14 = getv ? :_cadenceHistory;
         %tmp.15 = lgetv %i.3;
-        symbol [ i %tmp.15 958 36 37 ];
+        symbol [ i %tmp.15 957 36 37 ];
         %tmp.16 = agetv %tmp.14 %tmp.15;
         lputv %c.4 %tmp.16;
-        symbol [ c %c.4 958 16 17 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 959 12 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_959_12_962_12_if_stmt:
+        symbol [ c %c.4 957 16 17 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 958 12 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_958_12_961_12_if_stmt:
         %tmp.17 = lgetv %c.4;
-        symbol [ c %tmp.17 959 16 17 ];
+        symbol [ c %tmp.17 958 16 17 ];
         %tmp.18 = null;
         %tmp.19 = ne %tmp.17 %tmp.18;
-        bf %tmp.19 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_959_12_962_12_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_959_12_962_12_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_959_27_962_12_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 960 16 ]
+        bf %tmp.19 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_958_12_961_12_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_958_12_961_12_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_958_27_961_12_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 959 16 ]
         %tmp.20 = lgetv %total.1;
-        symbol [ total %tmp.20 960 16 21 ];
+        symbol [ total %tmp.20 959 16 21 ];
         %tmp.21 = lgetv %c.4;
-        symbol [ c %tmp.21 960 25 26 ];
+        symbol [ c %tmp.21 959 25 26 ];
         %tmp.22 = as %tmp.21 { (!Null) };
         %tmp.23 = add %tmp.20 %tmp.22;
         lputv %total.1 %tmp.23;
-        symbol [ total %total.1 960 16 21 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 961 16 ]
+        symbol [ total %total.1 959 16 21 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 960 16 ]
         %tmp.26 = lgetv %validSamples.2;
-        symbol [ validSamples %tmp.26 961 16 28 ];
+        symbol [ validSamples %tmp.26 960 16 28 ];
         %tmp.27 = add %tmp.26 1;
         lputv %validSamples.2 %tmp.27;
-        symbol [ validSamples %validSamples.2 961 16 28 ];
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_959_27_962_12_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_959_12_962_12_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_959_12_962_12_if_end:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_43_963_8_stop:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_incr:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 957 ]
+        symbol [ validSamples %validSamples.2 960 16 28 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_958_27_961_12_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_958_12_961_12_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_958_12_961_12_if_end:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_43_962_8_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_incr:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 956 ]
         %tmp.30 = lgetv %i.3;
-        symbol [ i %tmp.30 957 38 39 ];
+        symbol [ i %tmp.30 956 38 39 ];
         %tmp.31 = add %tmp.30 1;
         lputv %i.3 %tmp.31;
-        symbol [ i %i.3 957 38 39 ];
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_test;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_957_8_963_8_for_end:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 965 8 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_965_8_967_8_if_stmt:
+        symbol [ i %i.3 956 38 39 ];
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_test;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_956_8_962_8_for_end:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 964 8 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_964_8_966_8_if_stmt:
         %tmp.32 = lgetv %validSamples.2;
-        symbol [ validSamples %tmp.32 965 12 24 ];
+        symbol [ validSamples %tmp.32 964 12 24 ];
         %tmp.33 = 0;
         %tmp.34 = eq %tmp.32 %tmp.33;
-        bf %tmp.34 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_965_8_967_8_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_965_8_967_8_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_965_31_967_8_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 966 12 ]
+        bf %tmp.34 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_964_8_966_8_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_964_8_966_8_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_964_31_966_8_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 965 12 ]
         %tmp.35 = 0.0;
         ret %tmp.35;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_965_31_967_8_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_965_8_967_8_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_965_8_967_8_if_end:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 969 8 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_964_31_966_8_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_964_8_966_8_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_964_8_966_8_if_end:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 968 8 ]
         %tmp.36 = lgetv %total.1;
-        symbol [ total %tmp.36 969 15 20 ];
+        symbol [ total %tmp.36 968 15 20 ];
         %tmp.37 = lgetv %validSamples.2;
-        symbol [ validSamples %tmp.37 969 23 35 ];
+        symbol [ validSamples %tmp.37 968 23 35 ];
         %tmp.38 = div %tmp.36 %tmp.37;
         ret %tmp.38;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_949_42_970_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_948_42_969_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 972; @symbol_functiondef = [getTimeInZonePercentage,972,13,36]; @symbol_return<0> = [Number,972,42,48]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 971; @symbol_functiondef = [getTimeInZonePercentage,971,13,36]; @symbol_return<0> = [Number,971,42,48]; ]
     function getTimeInZonePercentage() as Number {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_972_49_974_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 973 8 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_971_49_973_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 972 8 ]
         %tmp.1 = self;
-        symbol [ computeTimeInZoneScore %tmp.2 973 15 37 ];
+        symbol [ computeTimeInZoneScore %tmp.2 972 15 37 ];
         %tmp.2 = getv function %tmp.1 :computeTimeInZoneScore;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         ret %tmp.3;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_972_49_974_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_971_49_973_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 976; @symbol_functiondef = [getMinCadenceFromHistory,976,13,37]; @symbol_return<0> = [Number,976,43,49]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 975; @symbol_functiondef = [getMinCadenceFromHistory,975,13,37]; @symbol_return<0> = [Number,975,43,49]; ]
     function getMinCadenceFromHistory() as Number {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_976_50_989_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 977 8 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_976_50_989_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_976_50_989_4_stop" ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_975_50_988_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 976 8 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_975_50_988_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_975_50_988_4_stop" ]
         %minCad.1 = local;
-        symbol [ minCad %minCad.1 977 12 18 ];
+        symbol [ minCad %minCad.1 976 12 18 ];
         %tmp.1 = null;
         lputv %minCad.1 %tmp.1;
-        symbol [ minCad %minCad.1 977 12 18 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 979 8 ]
-        for @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_test @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_incr @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_init:
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_begin" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_end" ]
+        symbol [ minCad %minCad.1 976 12 18 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 978 8 ]
+        for @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_test @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_incr @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_init:
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_begin" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_end" ]
         %i.2 = local;
-        symbol [ i %i.2 979 17 18 ];
+        symbol [ i %i.2 978 17 18 ];
         %tmp.2 = 0;
         lputv %i.2 %tmp.2;
-        symbol [ i %i.2 979 17 18 ];
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_test:
+        symbol [ i %i.2 978 17 18 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_test:
         %tmp.3 = lgetv %i.2;
-        symbol [ i %tmp.3 979 24 25 ];
-        symbol [ MAX_BARS %tmp.5 979 28 36 ];
+        symbol [ i %tmp.3 978 24 25 ];
+        symbol [ MAX_BARS %tmp.5 978 28 36 ];
         %tmp.5 = getv ? :MAX_BARS;
         %tmp.6 = lt %tmp.3 %tmp.5;
-        bf %tmp.6 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_begin:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_43_986_8_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 980 12 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_43_986_8_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_43_986_8_stop" ]
+        bf %tmp.6 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_begin:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_43_985_8_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 979 12 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_43_985_8_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_43_985_8_stop" ]
         %c.3 = local;
-        symbol [ c %c.3 980 16 17 ];
-        symbol [ _cadenceHistory %tmp.8 980 20 35 ];
+        symbol [ c %c.3 979 16 17 ];
+        symbol [ _cadenceHistory %tmp.8 979 20 35 ];
         %tmp.8 = getv ? :_cadenceHistory;
         %tmp.9 = lgetv %i.2;
-        symbol [ i %tmp.9 980 36 37 ];
+        symbol [ i %tmp.9 979 36 37 ];
         %tmp.10 = agetv %tmp.8 %tmp.9;
         lputv %c.3 %tmp.10;
-        symbol [ c %c.3 980 16 17 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 981 12 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_12_985_12_if_stmt:
+        symbol [ c %c.3 979 16 17 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 980 12 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_980_12_984_12_if_stmt:
         %tmp.11 = lgetv %c.3;
-        symbol [ c %tmp.11 981 16 17 ];
+        symbol [ c %tmp.11 980 16 17 ];
         %tmp.12 = null;
         %tmp.13 = ne %tmp.11 %tmp.12;
-        bf %tmp.13 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_12_985_12_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_12_985_12_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_27_985_12_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 982 16 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_16_984_16_if_stmt:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_20_982_42_begin:
+        bf %tmp.13 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_980_12_984_12_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_980_12_984_12_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_980_27_984_12_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 981 16 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_16_983_16_if_stmt:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_20_981_42_begin:
         %tmp.14 = lgetv %minCad.1;
-        symbol [ minCad %tmp.14 982 20 26 ];
+        symbol [ minCad %tmp.14 981 20 26 ];
         %tmp.15 = null;
         %tmp.16 = eq %tmp.14 %tmp.15;
-        bt %tmp.16 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_16_984_16_if_true;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_38_982_42_false:
+        bt %tmp.16 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_16_983_16_if_true;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_38_981_42_false:
         %tmp.17 = lgetv %c.3;
-        symbol [ c %tmp.17 982 38 39 ];
+        symbol [ c %tmp.17 981 38 39 ];
         %tmp.18 = as %tmp.17 { (!Null) };
         %tmp.19 = lgetv %minCad.1;
-        symbol [ minCad %tmp.19 982 42 48 ];
+        symbol [ minCad %tmp.19 981 42 48 ];
         %tmp.20 = as %tmp.19 { (!Null) };
         %tmp.21 = lt %tmp.18 %tmp.20;
         push %tmp.21;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_38_982_42_end:
-        %tmp.22 = phi [%tmp.16 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_20_982_42_begin] [%tmp.21 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_38_982_42_false] [%tmp.22 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_38_982_42_end];
-        bf %tmp.22 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_16_984_16_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_16_984_16_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_50_984_16_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 983 20 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_38_981_42_end:
+        %tmp.22 = phi [%tmp.16 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_20_981_42_begin] [%tmp.21 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_38_981_42_false] [%tmp.22 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_38_981_42_end];
+        bf %tmp.22 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_16_983_16_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_16_983_16_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_50_983_16_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 982 20 ]
         %tmp.23 = lgetv %c.3;
-        symbol [ c %tmp.23 983 29 30 ];
+        symbol [ c %tmp.23 982 29 30 ];
         %tmp.24 = as %tmp.23 { (!Null) };
         lputv %minCad.1 %tmp.24;
-        symbol [ minCad %minCad.1 983 20 26 ];
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_50_984_16_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_16_984_16_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_982_16_984_16_if_end:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_27_985_12_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_12_985_12_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_12_985_12_if_end:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_43_986_8_stop:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_incr:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 979 ]
+        symbol [ minCad %minCad.1 982 20 26 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_50_983_16_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_16_983_16_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_981_16_983_16_if_end:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_980_27_984_12_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_980_12_984_12_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_980_12_984_12_if_end:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_43_985_8_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_incr:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 978 ]
         %tmp.27 = lgetv %i.2;
-        symbol [ i %tmp.27 979 38 39 ];
+        symbol [ i %tmp.27 978 38 39 ];
         %tmp.28 = add %tmp.27 1;
         lputv %i.2 %tmp.28;
-        symbol [ i %i.2 979 38 39 ];
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_test;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_979_8_986_8_for_end:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 988 8 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_begin:
+        symbol [ i %i.2 978 38 39 ];
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_test;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_978_8_985_8_for_end:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 987 8 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_begin:
         %tmp.29 = lgetv %minCad.1;
-        symbol [ minCad %tmp.29 988 16 22 ];
+        symbol [ minCad %tmp.29 987 16 22 ];
         %tmp.30 = null;
         %tmp.31 = ne %tmp.29 %tmp.30;
-        bf %tmp.31 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_else_false;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_true:
+        bf %tmp.31 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_else_false;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_true:
         %tmp.32 = lgetv %minCad.1;
-        symbol [ minCad %tmp.32 988 34 40 ];
+        symbol [ minCad %tmp.32 987 34 40 ];
         %tmp.33 = as %tmp.32 { (!Null) };
-        symbol [ toNumber %tmp.34 988 41 49 ];
+        symbol [ toNumber %tmp.34 987 41 49 ];
         %tmp.34 = getv function %tmp.33 :toNumber;
         %tmp.35 = invoke %tmp.33 %tmp.34();
         push %tmp.35;
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_else_false:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_else_false:
         %tmp.36 = 0;
         push %tmp.36;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_end:
-        %tmp.37 = phi [%tmp.31 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_begin] [%tmp.35 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_true] [%tmp.36 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_else_false] [%tmp.37 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_988_15_988_54_end];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_end:
+        %tmp.37 = phi [%tmp.31 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_begin] [%tmp.35 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_true] [%tmp.36 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_else_false] [%tmp.37 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_987_15_987_54_end];
         ret %tmp.37;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_976_50_989_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_975_50_988_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 991; @symbol_functiondef = [getMaxCadenceFromHistory,991,13,37]; @symbol_return<0> = [Number,991,43,49]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 990; @symbol_functiondef = [getMaxCadenceFromHistory,990,13,37]; @symbol_return<0> = [Number,990,43,49]; ]
     function getMaxCadenceFromHistory() as Number {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_991_50_1004_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 992 8 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_991_50_1004_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_991_50_1004_4_stop" ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_990_50_1003_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 991 8 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_990_50_1003_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_990_50_1003_4_stop" ]
         %maxCad.1 = local;
-        symbol [ maxCad %maxCad.1 992 12 18 ];
+        symbol [ maxCad %maxCad.1 991 12 18 ];
         %tmp.1 = null;
         lputv %maxCad.1 %tmp.1;
-        symbol [ maxCad %maxCad.1 992 12 18 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 994 8 ]
-        for @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_test @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_incr @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_init:
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_begin" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_end" ]
+        symbol [ maxCad %maxCad.1 991 12 18 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 993 8 ]
+        for @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_test @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_incr @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_init:
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_begin" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_end" ]
         %i.2 = local;
-        symbol [ i %i.2 994 17 18 ];
+        symbol [ i %i.2 993 17 18 ];
         %tmp.2 = 0;
         lputv %i.2 %tmp.2;
-        symbol [ i %i.2 994 17 18 ];
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_test:
+        symbol [ i %i.2 993 17 18 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_test:
         %tmp.3 = lgetv %i.2;
-        symbol [ i %tmp.3 994 24 25 ];
-        symbol [ MAX_BARS %tmp.5 994 28 36 ];
+        symbol [ i %tmp.3 993 24 25 ];
+        symbol [ MAX_BARS %tmp.5 993 28 36 ];
         %tmp.5 = getv ? :MAX_BARS;
         %tmp.6 = lt %tmp.3 %tmp.5;
-        bf %tmp.6 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_begin:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_43_1001_8_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 995 12 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_43_1001_8_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_43_1001_8_stop" ]
+        bf %tmp.6 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_begin:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_43_1000_8_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 994 12 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_43_1000_8_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_43_1000_8_stop" ]
         %c.3 = local;
-        symbol [ c %c.3 995 16 17 ];
-        symbol [ _cadenceHistory %tmp.8 995 20 35 ];
+        symbol [ c %c.3 994 16 17 ];
+        symbol [ _cadenceHistory %tmp.8 994 20 35 ];
         %tmp.8 = getv ? :_cadenceHistory;
         %tmp.9 = lgetv %i.2;
-        symbol [ i %tmp.9 995 36 37 ];
+        symbol [ i %tmp.9 994 36 37 ];
         %tmp.10 = agetv %tmp.8 %tmp.9;
         lputv %c.3 %tmp.10;
-        symbol [ c %c.3 995 16 17 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 996 12 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_12_1000_12_if_stmt:
+        symbol [ c %c.3 994 16 17 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 995 12 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_995_12_999_12_if_stmt:
         %tmp.11 = lgetv %c.3;
-        symbol [ c %tmp.11 996 16 17 ];
+        symbol [ c %tmp.11 995 16 17 ];
         %tmp.12 = null;
         %tmp.13 = ne %tmp.11 %tmp.12;
-        bf %tmp.13 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_12_1000_12_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_12_1000_12_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_27_1000_12_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 997 16 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_16_999_16_if_stmt:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_20_997_42_begin:
+        bf %tmp.13 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_995_12_999_12_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_995_12_999_12_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_995_27_999_12_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 996 16 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_16_998_16_if_stmt:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_20_996_42_begin:
         %tmp.14 = lgetv %maxCad.1;
-        symbol [ maxCad %tmp.14 997 20 26 ];
+        symbol [ maxCad %tmp.14 996 20 26 ];
         %tmp.15 = null;
         %tmp.16 = eq %tmp.14 %tmp.15;
-        bt %tmp.16 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_16_999_16_if_true;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_38_997_42_false:
+        bt %tmp.16 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_16_998_16_if_true;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_38_996_42_false:
         %tmp.17 = lgetv %c.3;
-        symbol [ c %tmp.17 997 38 39 ];
+        symbol [ c %tmp.17 996 38 39 ];
         %tmp.18 = as %tmp.17 { (!Null) };
         %tmp.19 = lgetv %maxCad.1;
-        symbol [ maxCad %tmp.19 997 42 48 ];
+        symbol [ maxCad %tmp.19 996 42 48 ];
         %tmp.20 = as %tmp.19 { (!Null) };
         %tmp.21 = gt %tmp.18 %tmp.20;
         push %tmp.21;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_38_997_42_end:
-        %tmp.22 = phi [%tmp.16 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_20_997_42_begin] [%tmp.21 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_38_997_42_false] [%tmp.22 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_38_997_42_end];
-        bf %tmp.22 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_16_999_16_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_16_999_16_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_50_999_16_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 998 20 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_38_996_42_end:
+        %tmp.22 = phi [%tmp.16 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_20_996_42_begin] [%tmp.21 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_38_996_42_false] [%tmp.22 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_38_996_42_end];
+        bf %tmp.22 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_16_998_16_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_16_998_16_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_50_998_16_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 997 20 ]
         %tmp.23 = lgetv %c.3;
-        symbol [ c %tmp.23 998 29 30 ];
+        symbol [ c %tmp.23 997 29 30 ];
         %tmp.24 = as %tmp.23 { (!Null) };
         lputv %maxCad.1 %tmp.24;
-        symbol [ maxCad %maxCad.1 998 20 26 ];
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_50_999_16_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_16_999_16_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_997_16_999_16_if_end:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_27_1000_12_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_12_1000_12_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_12_1000_12_if_end:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_43_1001_8_stop:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_incr:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 994 ]
+        symbol [ maxCad %maxCad.1 997 20 26 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_50_998_16_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_16_998_16_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_996_16_998_16_if_end:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_995_27_999_12_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_995_12_999_12_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_995_12_999_12_if_end:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_43_1000_8_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_incr:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 993 ]
         %tmp.27 = lgetv %i.2;
-        symbol [ i %tmp.27 994 38 39 ];
+        symbol [ i %tmp.27 993 38 39 ];
         %tmp.28 = add %tmp.27 1;
         lputv %i.2 %tmp.28;
-        symbol [ i %i.2 994 38 39 ];
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_test;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_994_8_1001_8_for_end:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1003 8 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_begin:
+        symbol [ i %i.2 993 38 39 ];
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_test;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_993_8_1000_8_for_end:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1002 8 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_begin:
         %tmp.29 = lgetv %maxCad.1;
-        symbol [ maxCad %tmp.29 1003 16 22 ];
+        symbol [ maxCad %tmp.29 1002 16 22 ];
         %tmp.30 = null;
         %tmp.31 = ne %tmp.29 %tmp.30;
-        bf %tmp.31 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_else_false;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_true:
+        bf %tmp.31 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_else_false;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_true:
         %tmp.32 = lgetv %maxCad.1;
-        symbol [ maxCad %tmp.32 1003 34 40 ];
+        symbol [ maxCad %tmp.32 1002 34 40 ];
         %tmp.33 = as %tmp.32 { (!Null) };
-        symbol [ toNumber %tmp.34 1003 41 49 ];
+        symbol [ toNumber %tmp.34 1002 41 49 ];
         %tmp.34 = getv function %tmp.33 :toNumber;
         %tmp.35 = invoke %tmp.33 %tmp.34();
         push %tmp.35;
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_else_false:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_else_false:
         %tmp.36 = 0;
         push %tmp.36;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_end:
-        %tmp.37 = phi [%tmp.31 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_begin] [%tmp.35 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_true] [%tmp.36 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_else_false] [%tmp.37 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1003_15_1003_54_end];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_end:
+        %tmp.37 = phi [%tmp.31 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_begin] [%tmp.35 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_true] [%tmp.36 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_else_false] [%tmp.37 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1002_15_1002_54_end];
         ret %tmp.37;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_991_50_1004_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_990_50_1003_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1006; @symbol_functiondef = [hasValidSummaryData,1006,13,32]; @symbol_return<0> = [Boolean,1006,38,45]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1005; @symbol_functiondef = [hasValidSummaryData,1005,13,32]; @symbol_return<0> = [Boolean,1005,38,45]; ]
     function hasValidSummaryData() as Boolean {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1006_46_1008_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1007 8 ]
-        symbol [ Activity %tmp.1 1007 15 23 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1005_46_1007_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1006 8 ]
+        symbol [ Activity %tmp.1 1006 15 23 ];
         %tmp.1 = getm $.Toybox.Activity;
-        symbol [ getActivityInfo %tmp.2 1007 24 39 ];
+        symbol [ getActivityInfo %tmp.2 1006 24 39 ];
         %tmp.2 = getv function %tmp.1 :getActivityInfo;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         %tmp.4 = null;
         %tmp.5 = ne %tmp.3 %tmp.4;
         ret %tmp.5;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1006_46_1008_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1005_46_1007_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1010; @symbol_functiondef = [getfinalQC,1010,12,22]; @symbol_return<0> = [String,1010,28,34]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1009; @symbol_functiondef = [getfinalQC,1009,12,22]; @symbol_return<0> = [String,1009,28,34]; ]
     function getfinalQC() as String {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_35_1016_0_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1011 4 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1011_4_1015_4_if_stmt:
-        symbol [ _finalCQ %tmp.2 1011 8 16 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1009_35_1015_0_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1010 4 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_4_1014_4_if_stmt:
+        symbol [ _finalCQ %tmp.2 1010 8 16 ];
         %tmp.2 = getv ? :_finalCQ;
         %tmp.3 = null;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1011_4_1015_4_if_else_false;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1011_4_1015_4_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1011_26_1013_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1012 8 ]
+        bf %tmp.4 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_4_1014_4_if_else_false;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_4_1014_4_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_26_1012_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1011 8 ]
         %tmp.5 = "N/A";
         ret %tmp.5;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1011_26_1013_4_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1011_4_1015_4_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1011_4_1015_4_if_else_false:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1013_11_1015_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1014 8 ]
-        symbol [ _finalCQ %tmp.7 1014 15 23 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_26_1012_4_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_4_1014_4_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_4_1014_4_if_else_false:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1012_11_1014_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1013 8 ]
+        symbol [ _finalCQ %tmp.7 1013 15 23 ];
         %tmp.7 = getv ? :_finalCQ;
         %tmp.8 = as %tmp.7 { (!Null) };
-        symbol [ format %tmp.9 1014 24 30 ];
+        symbol [ format %tmp.9 1013 24 30 ];
         %tmp.9 = getv function %tmp.8 :format;
         %tmp.10 = "%d";
         %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
         %tmp.12 = "%";
         %tmp.13 = add %tmp.11 %tmp.12;
         ret %tmp.13;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1013_11_1015_4_stop:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1011_4_1015_4_if_end:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_35_1016_0_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1012_11_1014_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1010_4_1014_4_if_end:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1009_35_1015_0_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1018; @symbol_functiondef = [getAveragePace,1018,13,27]; @symbol_return<0> = [String,1018,33,39]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1017; @symbol_functiondef = [getAveragePace,1017,13,27]; @symbol_return<0> = [String,1017,33,39]; ]
     function getAveragePace() as String {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1019 4 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_4_1021_4_if_stmt:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_8_1019_84_begin:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_8_1019_56_begin:
-        symbol [ _sessionDuration %tmp.2 1019 8 24 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1018 4 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_4_1020_4_if_stmt:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_8_1018_84_begin:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_8_1018_56_begin:
+        symbol [ _sessionDuration %tmp.2 1018 8 24 ];
         %tmp.2 = getv ? :_sessionDuration;
         %tmp.3 = null;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bt %tmp.4 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_4_1021_4_if_true;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_36_1019_56_false:
-        symbol [ _sessionDistance %tmp.6 1019 36 52 ];
+        bt %tmp.4 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_4_1020_4_if_true;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_36_1018_56_false:
+        symbol [ _sessionDistance %tmp.6 1018 36 52 ];
         %tmp.6 = getv ? :_sessionDistance;
         %tmp.7 = null;
         %tmp.8 = eq %tmp.6 %tmp.7;
         push %tmp.8;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_36_1019_56_end:
-        %tmp.9 = phi [%tmp.4 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_8_1019_56_begin] [%tmp.8 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_36_1019_56_false] [%tmp.9 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_36_1019_56_end];
-        bt %tmp.9 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_4_1021_4_if_true;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_64_1019_84_false:
-        symbol [ _sessionDistance %tmp.11 1019 64 80 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_36_1018_56_end:
+        %tmp.9 = phi [%tmp.4 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_8_1018_56_begin] [%tmp.8 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_36_1018_56_false] [%tmp.9 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_36_1018_56_end];
+        bt %tmp.9 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_4_1020_4_if_true;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_64_1018_84_false:
+        symbol [ _sessionDistance %tmp.11 1018 64 80 ];
         %tmp.11 = getv ? :_sessionDistance;
         %tmp.12 = as %tmp.11 { (!Null) };
         %tmp.13 = 0;
         %tmp.14 = lte %tmp.12 %tmp.13;
         push %tmp.14;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_64_1019_84_end:
-        %tmp.15 = phi [%tmp.9 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_8_1019_84_begin] [%tmp.14 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_64_1019_84_false] [%tmp.15 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_64_1019_84_end];
-        bf %tmp.15 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_4_1021_4_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_4_1021_4_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_87_1021_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1020 8 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_64_1018_84_end:
+        %tmp.15 = phi [%tmp.9 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_8_1018_84_begin] [%tmp.14 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_64_1018_84_false] [%tmp.15 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_64_1018_84_end];
+        bf %tmp.15 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_4_1020_4_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_4_1020_4_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_87_1020_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1019 8 ]
         %tmp.16 = "--";
         ret %tmp.16;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_87_1021_4_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_4_1021_4_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1019_4_1021_4_if_end:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1023 4 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_stop" ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_87_1020_4_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_4_1020_4_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_4_1020_4_if_end:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1022 4 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_stop" ]
         %totalSeconds.1 = local;
-        symbol [ totalSeconds %totalSeconds.1 1023 8 20 ];
-        symbol [ _sessionDuration %tmp.18 1023 23 39 ];
+        symbol [ totalSeconds %totalSeconds.1 1022 8 20 ];
+        symbol [ _sessionDuration %tmp.18 1022 23 39 ];
         %tmp.18 = getv ? :_sessionDuration;
         %tmp.19 = 1000.0;
         %tmp.20 = div %tmp.18 %tmp.19;
         lputv %totalSeconds.1 %tmp.20;
-        symbol [ totalSeconds %totalSeconds.1 1023 8 20 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1024 4 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_stop" ]
+        symbol [ totalSeconds %totalSeconds.1 1022 8 20 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1023 4 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_stop" ]
         %distanceKm.2 = local;
-        symbol [ distanceKm %distanceKm.2 1024 8 18 ];
-        symbol [ _sessionDistance %tmp.22 1024 21 37 ];
+        symbol [ distanceKm %distanceKm.2 1023 8 18 ];
+        symbol [ _sessionDistance %tmp.22 1023 21 37 ];
         %tmp.22 = getv ? :_sessionDistance;
         %tmp.23 = 100000.0;
         %tmp.24 = div %tmp.22 %tmp.23;
         lputv %distanceKm.2 %tmp.24;
-        symbol [ distanceKm %distanceKm.2 1024 8 18 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1026 4 ]
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1026_4_1028_4_if_stmt:
+        symbol [ distanceKm %distanceKm.2 1023 8 18 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1025 4 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1025_4_1027_4_if_stmt:
         %tmp.25 = lgetv %distanceKm.2;
-        symbol [ distanceKm %tmp.25 1026 8 18 ];
+        symbol [ distanceKm %tmp.25 1025 8 18 ];
         %tmp.26 = 0;
         %tmp.27 = lte %tmp.25 %tmp.26;
-        bf %tmp.27 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1026_4_1028_4_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1026_4_1028_4_if_true:
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1026_25_1028_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1027 8 ]
+        bf %tmp.27 @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1025_4_1027_4_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1025_4_1027_4_if_true:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1025_25_1027_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1026 8 ]
         %tmp.28 = "--";
         ret %tmp.28;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1026_25_1028_4_stop:
-        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1026_4_1028_4_if_end;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1026_4_1028_4_if_end:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1030 4 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_stop" ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1025_25_1027_4_stop:
+        goto @c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1025_4_1027_4_if_end;
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1025_4_1027_4_if_end:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1029 4 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_stop" ]
         %paceSecondsPerKm.3 = local;
-        symbol [ paceSecondsPerKm %paceSecondsPerKm.3 1030 8 24 ];
+        symbol [ paceSecondsPerKm %paceSecondsPerKm.3 1029 8 24 ];
         %tmp.29 = lgetv %totalSeconds.1;
-        symbol [ totalSeconds %tmp.29 1030 27 39 ];
+        symbol [ totalSeconds %tmp.29 1029 27 39 ];
         %tmp.30 = lgetv %distanceKm.2;
-        symbol [ distanceKm %tmp.30 1030 42 52 ];
+        symbol [ distanceKm %tmp.30 1029 42 52 ];
         %tmp.31 = div %tmp.29 %tmp.30;
         lputv %paceSecondsPerKm.3 %tmp.31;
-        symbol [ paceSecondsPerKm %paceSecondsPerKm.3 1030 8 24 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1031 4 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_stop" ]
+        symbol [ paceSecondsPerKm %paceSecondsPerKm.3 1029 8 24 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1030 4 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_stop" ]
         %minutesPart.4 = local;
-        symbol [ minutesPart %minutesPart.4 1031 8 19 ];
+        symbol [ minutesPart %minutesPart.4 1030 8 19 ];
         %tmp.32 = lgetv %paceSecondsPerKm.3;
-        symbol [ paceSecondsPerKm %tmp.32 1031 23 39 ];
+        symbol [ paceSecondsPerKm %tmp.32 1030 23 39 ];
         %tmp.33 = 60;
         %tmp.34 = div %tmp.32 %tmp.33;
-        symbol [ toNumber %tmp.35 1031 46 54 ];
+        symbol [ toNumber %tmp.35 1030 46 54 ];
         %tmp.35 = getv function %tmp.34 :toNumber;
         %tmp.36 = invoke %tmp.34 %tmp.35();
         lputv %minutesPart.4 %tmp.36;
-        symbol [ minutesPart %minutesPart.4 1031 8 19 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1032 4 ]
-        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_stop" ]
+        symbol [ minutesPart %minutesPart.4 1030 8 19 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1031 4 ]
+        [ "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_start" "c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_stop" ]
         %secondsPart.5 = local;
-        symbol [ secondsPart %secondsPart.5 1032 8 19 ];
+        symbol [ secondsPart %secondsPart.5 1031 8 19 ];
         %tmp.37 = lgetv %paceSecondsPerKm.3;
-        symbol [ paceSecondsPerKm %tmp.37 1032 23 39 ];
+        symbol [ paceSecondsPerKm %tmp.37 1031 23 39 ];
         %tmp.38 = 60;
         %tmp.39 = mod %tmp.37 %tmp.38;
-        symbol [ toNumber %tmp.40 1032 46 54 ];
+        symbol [ toNumber %tmp.40 1031 46 54 ];
         %tmp.40 = getv function %tmp.39 :toNumber;
         %tmp.41 = invoke %tmp.39 %tmp.40();
         lputv %secondsPart.5 %tmp.41;
-        symbol [ secondsPart %secondsPart.5 1032 8 19 ];
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1034 4 ]
+        symbol [ secondsPart %secondsPart.5 1031 8 19 ];
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1033 4 ]
         %tmp.42 = lgetv %minutesPart.4;
-        symbol [ minutesPart %tmp.42 1034 11 22 ];
-        symbol [ format %tmp.43 1034 23 29 ];
+        symbol [ minutesPart %tmp.42 1033 11 22 ];
+        symbol [ format %tmp.43 1033 23 29 ];
         %tmp.43 = getv function %tmp.42 :format;
         %tmp.44 = "%02d";
         %tmp.45 = invoke %tmp.42 %tmp.43(%tmp.44);
         %tmp.46 = ":";
         %tmp.47 = add %tmp.45 %tmp.46;
         %tmp.48 = lgetv %secondsPart.5;
-        symbol [ secondsPart %tmp.48 1034 46 57 ];
-        symbol [ format %tmp.49 1034 58 64 ];
+        symbol [ secondsPart %tmp.48 1033 46 57 ];
+        symbol [ format %tmp.49 1033 58 64 ];
         %tmp.49 = getv function %tmp.48 :format;
         %tmp.50 = "%02d";
         %tmp.51 = invoke %tmp.48 %tmp.49(%tmp.50);
@@ -4350,77 +4350,77 @@ c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1
         %tmp.53 = "/km";
         %tmp.54 = add %tmp.52 %tmp.53;
         ret %tmp.54;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1018_40_1035_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1017_40_1034_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1037; @symbol_functiondef = [setLinkedTemperature,1037,13,33]; @symbol_param<0> = [value,1037,34,39]; @symbol_param<0>_type<0> = [String,1037,43,49]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1036; @symbol_functiondef = [setLinkedTemperature,1036,13,33]; @symbol_param<0> = [value,1036,34,39]; @symbol_param<0>_type<0> = [String,1036,43,49]; ]
     function setLinkedTemperature(value as String) as Void {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1037_59_1039_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1038 4 ]
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1036_59_1038_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1037 4 ]
         %tmp.1 = lgetv %value;
-        symbol [ value %tmp.1 1038 25 30 ];
-        symbol [ _linkedTemperature ? 1038 4 22 ];
+        symbol [ value %tmp.1 1037 25 30 ];
+        symbol [ _linkedTemperature ? 1037 4 22 ];
         putv self :_linkedTemperature %tmp.1;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1037_59_1039_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1036_59_1038_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1041; @symbol_functiondef = [getLinkedTemperature,1041,13,33]; @symbol_return<0> = [String,1041,39,45]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1040; @symbol_functiondef = [getLinkedTemperature,1040,13,33]; @symbol_return<0> = [String,1040,39,45]; ]
     function getLinkedTemperature() as String {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1041_46_1043_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1042 4 ]
-        symbol [ _linkedTemperature %tmp.2 1042 11 29 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1040_46_1042_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1041 4 ]
+        symbol [ _linkedTemperature %tmp.2 1041 11 29 ];
         %tmp.2 = getv ? :_linkedTemperature;
         ret %tmp.2;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1041_46_1043_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1040_46_1042_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1052; @symbol_functiondef = [getSessionDistance,1052,13,31]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1051; @symbol_functiondef = [getSessionDistance,1051,13,31]; ]
     function getSessionDistance() {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1052_34_1054_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1053 8 ]
-        symbol [ _sessionDistance %tmp.2 1053 15 31 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1051_34_1053_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1052 8 ]
+        symbol [ _sessionDistance %tmp.2 1052 15 31 ];
         %tmp.2 = getv ? :_sessionDistance;
         ret %tmp.2;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1052_34_1054_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1051_34_1053_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1056; @symbol_functiondef = [getAvgHeartRate,1056,13,28]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1055; @symbol_functiondef = [getAvgHeartRate,1055,13,28]; ]
     function getAvgHeartRate() {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1056_31_1058_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1057 8 ]
-        symbol [ _avgHeartRate %tmp.2 1057 15 28 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1055_31_1057_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1056 8 ]
+        symbol [ _avgHeartRate %tmp.2 1056 15 28 ];
         %tmp.2 = getv ? :_avgHeartRate;
         ret %tmp.2;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1056_31_1058_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1055_31_1057_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1060; @symbol_functiondef = [getPeakHeartRate,1060,13,29]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1059; @symbol_functiondef = [getPeakHeartRate,1059,13,29]; ]
     function getPeakHeartRate() {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1060_32_1062_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1061 8 ]
-        symbol [ _peakHeartRate %tmp.2 1061 15 29 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1059_32_1061_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1060 8 ]
+        symbol [ _peakHeartRate %tmp.2 1060 15 29 ];
         %tmp.2 = getv ? :_peakHeartRate;
         ret %tmp.2;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1060_32_1062_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1059_32_1061_4_stop:
     }
-    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1064; @symbol_functiondef = [getChartBarCount,1064,13,29]; @symbol_return<0> = [Number,1064,35,41]; ]
+    [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1063; @symbol_functiondef = [getChartBarCount,1063,13,29]; @symbol_return<0> = [Number,1063,35,41]; ]
     function getChartBarCount() as Number {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1064_42_1066_4_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1065 8 ]
-        symbol [ _chartDuration %tmp.2 1065 15 29 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1063_42_1065_4_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1064 8 ]
+        symbol [ _chartDuration %tmp.2 1064 15 29 ];
         %tmp.2 = getv ? :_chartDuration;
         ret %tmp.2;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1064_42_1066_4_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1063_42_1065_4_stop:
     }
 }
-[ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1069; @symbol_functiondef = [getApp,1069,9,15]; @symbol_return<0> = [GarminApp,1069,21,30]; ]
+[ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1068; @symbol_functiondef = [getApp,1068,9,15]; @symbol_return<0> = [GarminApp,1068,21,30]; ]
 function getApp() as GarminApp {
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1069_31_1071_0_start:
-[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1070 4 ]
-    symbol [ Application %tmp.1 1070 11 22 ];
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1068_31_1070_0_start:
+[ "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc" 1069 4 ]
+    symbol [ Application %tmp.1 1069 11 22 ];
     %tmp.1 = getm $.Toybox.Application;
-    symbol [ getApp %tmp.2 1070 23 29 ];
+    symbol [ getApp %tmp.2 1069 23 29 ];
     %tmp.2 = getv function %tmp.1 :getApp;
     %tmp.3 = invoke %tmp.1 %tmp.2();
     %tmp.4 = as %tmp.3 GarminApp;
-    symbol [ GarminApp %tmp.4 1070 35 44 ];
+    symbol [ GarminApp %tmp.4 1069 35 44 ];
     ret %tmp.4;
-c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1069_31_1071_0_stop:
+c__Users_wmvsw_OneDrive_Documents_GitHub_garmin_smartwatch_source_GarminApp_mc_1068_31_1070_0_stop:
 }
 [ @file = "c:\Users\wmvsw\OneDrive\Documents\GitHub\garmin-smartwatch\source\GarminApp.mc"; @line = 1; ]
 <init> {
