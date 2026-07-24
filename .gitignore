@@ -222,3 +222,12 @@ developer_key.pem
 *.mir
 *.mir
 *.mir
+*.mir
+*.mir
+*.mir
+bin/mir/source/GarminApp.mir
+/bin/mir/source
+/bin/mir/source
+bin/mir/source/GarminApp.mir
+/bin/mir
+/bin
