@@ -231,3 +231,6 @@ bin/mir/source/GarminApp.mir
 bin/mir/source/GarminApp.mir
 /bin/mir
 /bin
+
+# Garmin generated build files
+bin/
