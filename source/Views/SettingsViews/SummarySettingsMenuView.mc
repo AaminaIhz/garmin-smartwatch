@@ -14,15 +14,15 @@ class SummarySettingsMenuView extends WatchUi.View {
         dc.clear();
 
         var centerX = dc.getWidth() / 2;
-        var centerY = dc.getHeight() / 2;
+        var height = dc.getHeight();
 
         var icon = WatchUi.loadResource(Rez.Drawables.SummaryIcon);
-        dc.drawBitmap(centerX - (icon.getWidth() / 2), centerY - icon.getHeight() - 10, icon);
+        dc.drawBitmap(centerX - (icon.getWidth() / 2), (height * 0.25).toNumber(), icon);
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             centerX,
-            centerY + 10,
+            (height * 0.57).toNumber(),
             Graphics.FONT_MEDIUM,
             "Summary",
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
@@ -31,9 +31,9 @@ class SummarySettingsMenuView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             centerX,
-            centerY + 50,
+            (height * 0.72).toNumber(),
             Graphics.FONT_XTINY,
-            "tap to open",
+            "START to open",
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
     }
