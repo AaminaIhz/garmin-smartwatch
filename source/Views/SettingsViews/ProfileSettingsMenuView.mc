@@ -17,14 +17,18 @@ class ProfileSettingsMenuView extends WatchUi.View {
         var width = dc.getWidth();
         var height = dc.getHeight();
 
-        // draws "Settings" text in the center of the screen
+        var centerX = width / 2;
+
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
-            width / 2,
-            height / 2,
+            centerX,
+            (height * 0.45).toNumber(),
             Graphics.FONT_MEDIUM,
-            "Profile Settings",
+            "Profile",
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
         );
+
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(centerX, (height * 0.60).toNumber(), Graphics.FONT_XTINY, "START to open", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 }

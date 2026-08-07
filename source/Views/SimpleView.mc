@@ -211,7 +211,7 @@ class SimpleView extends WatchUi.View {
         var app = Application.getApp();
         if (app.isActivityRecording()) {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-            dc.fillCircle(dc.getWidth() - 15, 15, 8);
+            dc.fillCircle((dc.getWidth() * 0.82).toNumber(), (dc.getHeight() * 0.12).toNumber(), 6);
         }
     }
 
@@ -219,9 +219,10 @@ class SimpleView extends WatchUi.View {
         var w = dc.getWidth();
         var h = dc.getHeight();
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawLine(20, h * 0.22, w - 20, h * 0.22);
-        dc.drawLine(20, h * 0.43, w - 20, h * 0.43);
-        dc.drawLine(20, h * 0.60, w - 20, h * 0.60);
-        dc.drawLine(20, h * 0.78, w - 20, h * 0.78);
+        var inset = (w * 0.13).toNumber();
+        dc.drawLine(inset, h * 0.23, w - inset, h * 0.23);
+        dc.drawLine(inset, h * 0.45, w - inset, h * 0.45);
+        dc.drawLine(inset, h * 0.64, w - inset, h * 0.64);
+        dc.drawLine(inset, h * 0.81, w - inset, h * 0.81);
     }
 }
