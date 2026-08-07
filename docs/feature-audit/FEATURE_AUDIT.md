@@ -155,8 +155,6 @@ Expected: Missing cadence is recorded as missing and CQ remains unavailable or l
 
 Actual: The app inserts 100 spm every second, calculates a CQ score, and reports high confidence.
 
-Evidence: [`03-recording-no-sensor-data.png`](evidence/03-recording-no-sensor-data.png)
-
 ### BUG-02: Summary distance and average pace use the wrong unit conversion
 
 Severity: High
@@ -170,8 +168,6 @@ Steps:
 Expected: Metres are divided by 1,000 to obtain kilometres.
 
 Actual: Summary code divides metres by 100,000, understating distance by 100x and corrupting average pace.
-
-Evidence: [`04-live-fit-metrics.png`](evidence/04-live-fit-metrics.png)
 
 ### BUG-03: Advanced graph double-counts cadence and miscolours high cadence
 
@@ -200,8 +196,6 @@ Steps:
 Expected: Yes and No are both visible.
 
 Actual: No is drawn at y=280 and is outside the display.
-
-Evidence: [`02-start-confirmation.png`](evidence/02-start-confirmation.png)
 
 ### BUG-05: Summary preference cannot be changed
 
@@ -324,13 +318,6 @@ Steps:
 Expected: Every product ID in the manifest is valid.
 
 Actual: The compiler warns that `fenix7x` is invalid.
-
-## Evidence index
-
-- [`01-initial-screen.png`](evidence/01-initial-screen.png): initial dashboard
-- [`02-start-confirmation.png`](evidence/02-start-confirmation.png): invisible No option on fēnix 7
-- [`03-recording-no-sensor-data.png`](evidence/03-recording-no-sensor-data.png): active recording without sensor fields
-- [`04-live-fit-metrics.png`](evidence/04-live-fit-metrics.png): live FIT cadence, HR, pace, timer, and distance
 
 ## Limitations and recommended physical-watch checks
 
