@@ -8,22 +8,22 @@
         color="Gfx.COLOR_WHITE" />
 
     <label id="cadence_text"
-        x="42%"
-        y="27%"
+        x="39%"
+        y="25%"
         font="Gfx.FONT_NUMBER_MILD"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
         color="Gfx.COLOR_WHITE" />
 
     <label id="spm_label"
         x="72%"
-        y="31%"
+        y="27%"
         font="Gfx.FONT_MEDIUM"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
         color="Gfx.COLOR_BLUE" />
 
     <bitmap id="heartrate_icon"
         x="13%"
-        y="47%"
+        y="46%"
         filename="../drawables/heart-rate.png" />
 
     <label id="heartrate_text"
@@ -40,14 +40,16 @@
         justification="Gfx.TEXT_JUSTIFY_CENTER"
         color="Gfx.COLOR_PURPLE" />
 
-    <bitmap id="pace_icon"
-        x="16%"
-        y="67%"
-        filename="../drawables/shoe_icon.png" />
-
     <label id="pace_text"
-        x="62%"
-        y="68%"
+        x="48%"
+        y="67%"
+        font="Gfx.FONT_SMALL"
+        justification="Gfx.TEXT_JUSTIFY_CENTER"
+        color="Gfx.COLOR_GREEN" />
+
+    <label id="pace_unit"
+        x="74%"
+        y="67%"
         font="Gfx.FONT_SMALL"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
         color="Gfx.COLOR_GREEN" />

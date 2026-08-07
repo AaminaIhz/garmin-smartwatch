@@ -15,6 +15,8 @@ class SimpleView extends WatchUi.View {
     private var _distanceDisplay;
     private var _timeDisplay;
     private var _paceDisplay;
+    private var _paceUnitDisplay;
+    private var _paceIcon;
     
     // Logic & Timer Variables
     private var _refreshTimer;
@@ -40,10 +42,13 @@ class SimpleView extends WatchUi.View {
         _heartrateDisplay = findDrawableById("heartrate_text");
         _distanceDisplay = findDrawableById("distance_text"); // Restored
         _timeDisplay = findDrawableById("time_text");
-        _paceDisplay = findDrawableById("pace_text"); 
+        _paceDisplay = findDrawableById("pace_text");
+        _paceUnitDisplay = findDrawableById("pace_unit");
+        _paceIcon = WatchUi.loadResource(Rez.Drawables.PaceIcon);
 
         var _spmLabel = findDrawableById("spm_label") as WatchUi.Text;
         if (_spmLabel != null) { _spmLabel.setText("SPM"); }
+        if (_paceUnitDisplay != null) { (_paceUnitDisplay as WatchUi.Text).setText("min/km"); }
     }
 
     function onShow() as Void {
@@ -83,6 +88,7 @@ class SimpleView extends WatchUi.View {
         drawRecordingIndicator(dc);
         
         View.onUpdate(dc); 
+        drawPaceIcon(dc);
         drawDividers(dc);
     }
 
@@ -177,9 +183,9 @@ class SimpleView extends WatchUi.View {
         // Pace
         if (_paceDisplay != null && info != null && info.currentSpeed != null && info.currentSpeed > 0) {
             var pace = (1000.0 / info.currentSpeed).toNumber();
-            _paceDisplay.setText((pace/60).format("%d") + ":" + (pace%60).format("%02d") + " min/km");
+            _paceDisplay.setText((pace/60).format("%d") + ":" + (pace%60).format("%02d"));
         } else if (_paceDisplay != null) {
-            _paceDisplay.setText("--:-- min/km");
+            _paceDisplay.setText("--:--");
         }
     }
 
@@ -213,6 +219,19 @@ class SimpleView extends WatchUi.View {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
             dc.fillCircle((dc.getWidth() * 0.82).toNumber(), (dc.getHeight() * 0.12).toNumber(), 6);
         }
+    }
+
+    function drawPaceIcon(dc as Dc) as Void {
+        if (_paceIcon == null) { return; }
+
+        var transform = new Graphics.AffineTransform();
+        transform.setToScale(0.62, 0.62);
+        dc.drawBitmap2(
+            (dc.getWidth() * 0.12).toNumber(),
+            (dc.getHeight() * 0.67).toNumber(),
+            _paceIcon,
+            { :transform => transform }
+        );
     }
 
     function drawDividers(dc as Dc) as Void {
