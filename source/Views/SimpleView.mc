@@ -224,13 +224,10 @@ class SimpleView extends WatchUi.View {
     function drawPaceIcon(dc as Dc) as Void {
         if (_paceIcon == null) { return; }
 
-        var transform = new Graphics.AffineTransform();
-        transform.setToScale(0.62, 0.62);
-        dc.drawBitmap2(
+        dc.drawBitmap(
             (dc.getWidth() * 0.12).toNumber(),
             (dc.getHeight() * 0.67).toNumber(),
-            _paceIcon,
-            { :transform => transform }
+            _paceIcon
         );
     }
 
