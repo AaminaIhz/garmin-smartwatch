@@ -45,10 +45,18 @@ class AdvancedView extends WatchUi.View {
         }
     }
 
-    // THIS IS THE MAIN LOGIC LOOP (Runs every 1 second)
+// THIS IS THE MAIN LOGIC LOOP (Runs every 1 second)
     function refreshScreen() as Void {
         var info = Activity.getActivityInfo();
         var app = Application.getApp();
+
+        // Pause freeze: stop all runtime calculations while not recording.
+        // This freezes the cadence graph, cadence processing, and vibration
+        // alerts until Resume. Resume re-enables these automatically.
+        if (!app.isRecording()) {
+            WatchUi.requestUpdate();
+            return;
+        }
 
         // 1. Update Chart Data
         if (info != null && info.currentCadence != null) {

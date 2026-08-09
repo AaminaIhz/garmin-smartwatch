@@ -67,9 +67,17 @@ class SimpleView extends WatchUi.View {
         }
     }
 
-    // --- Logic Loop (The "Heartbeat") ---
+// --- Logic Loop (The "Heartbeat") ---
     function refreshScreen() as Void {
         var info = Activity.getActivityInfo();
+        var app = Application.getApp();
+        
+        // Pause freeze: stop all runtime calculations while not recording.
+        // This freezes cadence processing and vibration alerts until Resume.
+        if (!app.isRecording()) {
+            WatchUi.requestUpdate();
+            return;
+        }
         
         // 1. Update internal state (Zone checking)
         updateCadenceLogic(info);

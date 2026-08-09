@@ -221,14 +221,8 @@ class SimpleViewDelegate extends WatchUi.BehaviorDelegate {
            return true;
         }
 
-        // FULL RESET TO SIMPLE VIEW
-        WatchUi.switchToView(
-            new SimpleView(),
-            new SimpleViewDelegate(),
-            WatchUi.SLIDE_IMMEDIATE
-        );
-
-        return true;
+        // Idle: allow the platform's default back behavior so users can exit the app.
+        return false;
     }
 }
 
