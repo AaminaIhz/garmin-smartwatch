@@ -11,9 +11,9 @@ class BarChartSettingsMenuDelegate extends WatchUi.BehaviorDelegate {
 
     // Handles the BACK button
     function onBack() as Boolean{
-        System.println("Back pressed: Returning to main view");
+        System.println("Back pressed: Returning to previous view");
 
-        WatchUi.switchToView(new SimpleView(), new SimpleViewDelegate(), WatchUi.SLIDE_DOWN);
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
         return true;
     }
 
@@ -33,8 +33,8 @@ class BarChartSettingsMenuDelegate extends WatchUi.BehaviorDelegate {
 
         var resetView = new ResetSettingsView();
         
-        // Push the reset settings view
-        WatchUi.pushView(
+        // Replace this settings card while keeping SettingsView beneath it.
+        WatchUi.switchToView(
             resetView,
             new ResetSettingsDelegate(resetView),
             WatchUi.SLIDE_UP

@@ -61,11 +61,12 @@ class ResetSettingsDelegate extends WatchUi.BehaviorDelegate {
         }
 
         if (_view.isOpenScreen()) {
-            System.println("Up button pressed: Opening Bar Chart Settings");
+            System.println("UP pressed from Reset: Summary Settings");
 
-            WatchUi.pushView(
-                new BarChartSettingsMenuView(),
-                new BarChartSettingsMenuDelegate(),
+            var summary = new SummarySettingsMenuView();
+            WatchUi.switchToView(
+                summary,
+                new SummarySettingsMenuDelegate(summary),
                 WatchUi.SLIDE_DOWN
             );
         }
@@ -81,11 +82,11 @@ class ResetSettingsDelegate extends WatchUi.BehaviorDelegate {
 
         // First Reset screen: DOWN goes to Cadence Settings
         if (_view.isOpenScreen()) {
-            System.println("Down button pressed: Opening Vibration On Settings");
+            System.println("DOWN pressed from Reset: Cadence Settings");
 
-            WatchUi.pushView(
-                new VibrationsOnSettingsView(),
-                new VibrationsOnSettingsMenuDelegate(),
+            WatchUi.switchToView(
+                new CadenceSettingsMenuView(),
+                new CadenceSettingsMenuDelegate(),
                 WatchUi.SLIDE_UP
             );
             return;
