@@ -35,7 +35,12 @@ class SummarySettingsMenuDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onBack() {
-        _view.handleBack();
+        if (_view.isOpenScreen()) {
+            System.println("Back pressed: Returning to previous view");
+            WatchUi.popView(WatchUi.SLIDE_DOWN);
+        } else {
+            _view.handleBack();
+        }
         return true;
     }
 
@@ -48,7 +53,7 @@ class SummarySettingsMenuDelegate extends WatchUi.BehaviorDelegate {
         if (_view.isOpenScreen()) {
             System.println("Up button pressed: Opening Profile Settings");
 
-            WatchUi.pushView(
+            WatchUi.switchToView(
                 new ProfileSettingsMenuView(),
                 new ProfileSettingsMenuDelegate(),
                 WatchUi.SLIDE_DOWN

@@ -13,13 +13,9 @@ class CadenceSettingsMenuDelegate extends WatchUi.BehaviorDelegate {
     // Handles the BACK button
     function onBack() as Boolean {
 
-        System.println("Back pressed: Returning to main view");
+        System.println("Back pressed: Returning to previous view");
 
-        WatchUi.switchToView(
-            new SimpleView(),
-            new SimpleViewDelegate(),
-            WatchUi.SLIDE_DOWN
-        );
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
 
         return true;
     }
@@ -42,7 +38,7 @@ class CadenceSettingsMenuDelegate extends WatchUi.BehaviorDelegate {
     function onNextPage() {
     System.println("Down button pressed: Opening Profile Settings");
 
-    WatchUi.pushView(
+    WatchUi.switchToView(
         new ProfileSettingsMenuView(),
         new ProfileSettingsMenuDelegate(),
         WatchUi.SLIDE_UP
@@ -58,7 +54,7 @@ class CadenceSettingsMenuDelegate extends WatchUi.BehaviorDelegate {
 
         var resetView = new ResetSettingsView();
         
-        WatchUi.pushView(
+        WatchUi.switchToView(
             resetView,
             new ResetSettingsDelegate(resetView),
             WatchUi.SLIDE_DOWN

@@ -227,6 +227,16 @@ class SimpleViewDelegate extends WatchUi.BehaviorDelegate {
             WatchUi.pushView(
                 _currentView,
                 new AdvancedViewDelegate(_currentView),
+                WatchUi.SLIDE_UP
+            );
+            return true;
+        }
+
+        if (direction == WatchUi.SWIPE_DOWN) {
+            _currentView = new AdvancedView();
+            WatchUi.pushView(
+                _currentView,
+                new AdvancedViewDelegate(_currentView),
                 WatchUi.SLIDE_DOWN
             );
             return true;
@@ -260,7 +270,7 @@ class SimpleViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function pushSettingsView() as Void {
-        WatchUi.switchToView(new SettingsView(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
+        WatchUi.pushView(new SettingsView(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
     }
 
     function setMenuActive(active as Boolean) as Void {
@@ -277,11 +287,8 @@ class SimpleViewDelegate extends WatchUi.BehaviorDelegate {
            return true;
         }
 
-        // The main screen is the root view, so there is nowhere to pop back to.
-        // Consume a short press to keep the app open. Long BACK is handled by
-        // triggerBackLongPress() and opens Feedback Mode.
-        System.println("[UI] Short BACK pressed - staying on main screen");
-        return true;
+        // Idle: allow the platform's default back behavior so users can exit the app.
+        return false;
     }
 }
 

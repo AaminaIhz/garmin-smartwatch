@@ -13,7 +13,7 @@ class SettingsMenuDelegate extends WatchUi.BehaviorDelegate {
     function onBack() as Boolean{
         System.println("Back pressed: Returning to main view");
 
-        WatchUi.switchToView(new SimpleView(), new SimpleViewDelegate(), WatchUi.SLIDE_DOWN);
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
         return true;
     }
 
@@ -22,7 +22,7 @@ class SettingsMenuDelegate extends WatchUi.BehaviorDelegate {
         System.println("Select/Tap pressed: Opening cadence settings");
         
         // Push the cadence settings view
-        WatchUi.switchToView(
+        WatchUi.pushView(
             new CadenceSettingsMenuView(),
             new CadenceSettingsMenuDelegate(),
             WatchUi.SLIDE_UP);
@@ -34,7 +34,7 @@ class SettingsMenuDelegate extends WatchUi.BehaviorDelegate {
         System.println("Down button pressed: Opening Cadence Settings");
         
         // Push the cadence settings view
-        WatchUi.switchToView(
+        WatchUi.pushView(
             new CadenceSettingsMenuView(),
             new CadenceSettingsMenuDelegate(),
         WatchUi.SLIDE_UP);
@@ -48,7 +48,7 @@ class SettingsMenuDelegate extends WatchUi.BehaviorDelegate {
         
         // Push the profile settings view
             var summary = new SummarySettingsMenuView();
-        WatchUi.switchToView(
+        WatchUi.pushView(
             summary,
             new SummarySettingsMenuDelegate(summary),
             WatchUi.SLIDE_DOWN);

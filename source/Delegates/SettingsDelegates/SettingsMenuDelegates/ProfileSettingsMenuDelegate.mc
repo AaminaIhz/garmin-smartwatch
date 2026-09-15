@@ -11,9 +11,9 @@ class ProfileSettingsMenuDelegate extends WatchUi.BehaviorDelegate {
 
     // Handles the BACK button
     function onBack() as Boolean {
-        System.println("Back pressed: Returning to main view");
+        System.println("Back pressed: Returning to previous view");
 
-        WatchUi.switchToView(new SimpleView(), new SimpleViewDelegate(), WatchUi.SLIDE_DOWN);
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
         return true;
     }
 
