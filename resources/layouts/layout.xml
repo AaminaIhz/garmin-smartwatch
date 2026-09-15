@@ -22,23 +22,18 @@
         color="Gfx.COLOR_BLUE" />
 
     <label id="cadence_zone"
-        x="18%"
+        x="14%"
         y="39%"
         font="Gfx.FONT_XTINY"
         justification="Gfx.TEXT_JUSTIFY_LEFT"
         color="Gfx.COLOR_LT_GRAY" />
 
     <label id="cadence_range"
-        x="82%"
+        x="88%"
         y="39%"
         font="Gfx.FONT_XTINY"
         justification="Gfx.TEXT_JUSTIFY_RIGHT"
         color="Gfx.COLOR_LT_GRAY" />
-
-    <bitmap id="heartrate_icon"
-        x="13%"
-        y="48%"
-        filename="../drawables/heart-rate.png" />
 
     <label id="heartrate_text"
         x="30%"

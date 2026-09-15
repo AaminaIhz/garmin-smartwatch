@@ -40,6 +40,17 @@ class SimpleViewLayoutTests(unittest.TestCase):
             int(self.labels["distance_text"]["x"].rstrip("%")),
         )
 
+    def test_cadence_status_and_range_have_safe_column_spacing(self):
+        self.assertEqual("14%", self.labels["cadence_zone"]["x"])
+        self.assertEqual("88%", self.labels["cadence_range"]["x"])
+        self.assertIn('zoneText = "below";', self.view_source)
+        self.assertIn('zoneText = "above";', self.view_source)
+
+    def test_metric_icons_are_drawn_on_their_text_rows(self):
+        self.assertIn("Rez.Drawables.MainHeartRateIcon", self.view_source)
+        self.assertIn("(dc.getHeight() * 0.50).toNumber()", self.view_source)
+        self.assertIn("(dc.getHeight() * 0.69).toNumber()", self.view_source)
+
     def test_screen_is_cleared_before_layout_is_redrawn(self):
         update_start = self.view_source.index("function onUpdate(dc as Dc)")
         update_end = self.view_source.index("function updateCadenceLogic", update_start)

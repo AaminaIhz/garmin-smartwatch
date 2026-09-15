@@ -21,6 +21,7 @@ class SimpleView extends WatchUi.View {
     private var _timeDisplay;
     private var _paceDisplay;
     private var _paceIcon;
+    private var _heartRateIcon;
     private var _vibrationOnIcon;
     private var _vibrationOffIcon;
     
@@ -52,6 +53,7 @@ class SimpleView extends WatchUi.View {
         _timeDisplay = findDrawableById("time_text");
         _paceDisplay = findDrawableById("pace_text");
         _paceIcon = WatchUi.loadResource(Rez.Drawables.PaceIcon);
+        _heartRateIcon = WatchUi.loadResource(Rez.Drawables.MainHeartRateIcon);
         _vibrationOnIcon = WatchUi.loadResource(Rez.Drawables.MainVibrationOnIcon);
         _vibrationOffIcon = WatchUi.loadResource(Rez.Drawables.MainVibrationOffIcon);
 
@@ -106,6 +108,7 @@ class SimpleView extends WatchUi.View {
         dc.clear();
 
         View.onUpdate(dc); 
+        drawHeartRateIcon(dc);
         drawPaceIcon(dc);
         drawDividers(dc);
         drawVibrationStatusIcon(dc);
@@ -184,9 +187,9 @@ class SimpleView extends WatchUi.View {
         if (_cadenceZoneDisplay != null) {
             var zoneText = "in range";
             if (cadence != null && cadence < minCadence) {
-                zoneText = "below range";
+                zoneText = "below";
             } else if (cadence != null && cadence > maxCadence) {
-                zoneText = "above range";
+                zoneText = "above";
             }
             _cadenceZoneDisplay.setText(zoneText);
         }
@@ -274,9 +277,20 @@ class SimpleView extends WatchUi.View {
         if (_paceIcon == null) { return; }
 
         dc.drawBitmap(
-            (dc.getWidth() * 0.16).toNumber(),
-            (dc.getHeight() * 0.67).toNumber(),
+            (dc.getWidth() * 0.18).toNumber(),
+            (dc.getHeight() * 0.69).toNumber(),
             _paceIcon
+        );
+    }
+
+    function drawHeartRateIcon(dc as Dc) as Void {
+        if (_heartRateIcon == null) { return; }
+
+        // Align the icon's visual centre with the heart-rate text baseline.
+        dc.drawBitmap(
+            (dc.getWidth() * 0.15).toNumber(),
+            (dc.getHeight() * 0.50).toNumber(),
+            _heartRateIcon
         );
     }
 
