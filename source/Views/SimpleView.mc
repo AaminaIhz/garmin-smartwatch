@@ -9,7 +9,7 @@ import Toybox.Attention;
 class SimpleView extends WatchUi.View {
 
     const MAIN_VIBRATION_ICON_SIZE = 34;
-    const MAIN_VIBRATION_ICON_BOTTOM_MARGIN = 0.10;
+    const MAIN_VIBRATION_ICON_BOTTOM_MARGIN = 0.05;
 
     // UI Drawables
     private var _cadenceDisplay;
@@ -277,8 +277,8 @@ class SimpleView extends WatchUi.View {
         if (_paceIcon == null) { return; }
 
         dc.drawBitmap(
-            (dc.getWidth() * 0.18).toNumber(),
-            (dc.getHeight() * 0.69).toNumber(),
+            (dc.getWidth() * 0.17).toNumber(),
+            (dc.getHeight() * 0.70).toNumber(),
             _paceIcon
         );
     }

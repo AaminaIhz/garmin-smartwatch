@@ -49,7 +49,8 @@ class SimpleViewLayoutTests(unittest.TestCase):
     def test_metric_icons_are_drawn_on_their_text_rows(self):
         self.assertIn("Rez.Drawables.MainHeartRateIcon", self.view_source)
         self.assertIn("(dc.getHeight() * 0.50).toNumber()", self.view_source)
-        self.assertIn("(dc.getHeight() * 0.69).toNumber()", self.view_source)
+        self.assertIn("(dc.getHeight() * 0.70).toNumber()", self.view_source)
+        self.assertIn("MAIN_VIBRATION_ICON_BOTTOM_MARGIN = 0.05", self.view_source)
 
     def test_screen_is_cleared_before_layout_is_redrawn(self):
         update_start = self.view_source.index("function onUpdate(dc as Dc)")
